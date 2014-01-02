@@ -16,6 +16,12 @@ library
   -- exposed-modules:
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.6 && <4.7
+  build-depends:       base >=4.6 && <4.7,
+                       herringbone,
+                       fay,
+                       -- hack: compiling Fay requires fay-base, but we can't
+                       -- depend on it explicitly (because of the
+                       -- Prelude module name clash).
+                       fay-text
   -- hs-source-dirs:
   default-language:    Haskell2010
