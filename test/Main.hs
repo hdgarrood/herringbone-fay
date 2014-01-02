@@ -17,4 +17,6 @@ app :: Application
 app = toApplication hb
 
 main :: IO ()
-main = run 3000 app
+main = do
+    putStrLn "herringbone-fay test server: starting on port 3000..."
+    run 3000 app
