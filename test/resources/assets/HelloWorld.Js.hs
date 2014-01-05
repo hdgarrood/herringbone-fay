@@ -1,4 +1,4 @@
-module HelloWorld where
+module HelloWorld.Js where
 
 import Prelude
 

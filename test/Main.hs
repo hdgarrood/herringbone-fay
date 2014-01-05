@@ -6,11 +6,14 @@ import Network.Wai.Handler.Warp
 import Web.Herringbone
 import Web.Herringbone.Preprocessor.Fay
 
+fay :: PP
+fay = makeFayPP def
+
 hb :: Herringbone
 hb = herringbone
     ( addSourceDir "test/resources/assets"
     . setDestDir   "test/resources/compiled_assets"
-    . addPreprocessors [fay def]
+    . addPreprocessors [fay]
     )
 
 app :: Application
